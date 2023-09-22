@@ -1,0 +1,22 @@
+﻿For migrations, you need dotnet ef ( dotnet entity framework cli )
+
+# Run
+dotnet ef ( if this throws an error, you need to download it, RUN -> dotnet tool install --global dotnet-e )
+
+# Run
+dotnet restore
+
+# Run ( if you are in the project folder, where CityInfoDBMigration is the name of the migration description )
+dotnet ef migrations add CityInfoDBMigration
+
+# OR Run ( if you outside the project folder, this worked for me )
+dotnet ef migrations add CityInfoDBMigration -p CityInfo.API
+
+# I ran this to bundle the migration, not sure this is needed to apply a migration
+dotnet ef migrations bundle -p CityInfo.API -v
+
+# If you get an error on the above, run and then rebundle if you need to
+dotnet restore -r osx-arm64
+
+$ To run the migration
+dotnet ef database update
