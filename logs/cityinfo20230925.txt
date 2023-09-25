@@ -1,0 +1,42 @@
+2023-09-25 08:06:17.499 +01:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-25 08:06:17.550 +01:00 [DBG] Hosting starting
+2023-09-25 08:06:18.991 +01:00 [INF] Now listening on: https://localhost:7015
+2023-09-25 08:06:18.992 +01:00 [INF] Now listening on: http://localhost:5067
+2023-09-25 08:06:18.992 +01:00 [DBG] Loaded hosting startup assembly CityInfo.API
+2023-09-25 08:06:18.992 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-25 08:06:18.992 +01:00 [INF] Hosting environment: Development
+2023-09-25 08:06:18.992 +01:00 [INF] Content root path: /Users/uchencho/Documents/work/C#/CityInfo/CityInfo.API
+2023-09-25 08:06:18.992 +01:00 [DBG] Hosting started
+2023-09-25 08:06:38.438 +01:00 [DBG] Connection id "0HMTTINR61LQP" received FIN.
+2023-09-25 08:06:38.449 +01:00 [DBG] Connection id "0HMTTINR61LQP" accepted.
+2023-09-25 08:06:38.452 +01:00 [DBG] Connection id "0HMTTINR61LQP" started.
+2023-09-25 08:06:38.453 +01:00 [DBG] Connection id "0HMTTINR61LQQ" accepted.
+2023-09-25 08:06:38.478 +01:00 [DBG] Connection id "0HMTTINR61LQQ" started.
+2023-09-25 08:06:38.495 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-25 08:06:38.513 +01:00 [DBG] Connection id "0HMTTINR61LQP" stopped.
+2023-09-25 08:06:38.515 +01:00 [DBG] Connection id "0HMTTINR61LQP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-25 08:06:38.536 +01:00 [DBG] Connection 0HMTTINR61LQQ established using the following protocol: "Tls12"
+2023-09-25 08:06:38.570 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7015/api/cities - -
+2023-09-25 08:06:38.571 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-25 08:06:38.581 +01:00 [DBG] The request path  does not match the path filter
+2023-09-25 08:06:38.593 +01:00 [DBG] 1 candidate(s) found for the request path '/api/cities'
+2023-09-25 08:06:38.594 +01:00 [DBG] Endpoint 'CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API)' with route pattern 'api/cities' is valid for the request path '/api/cities'
+2023-09-25 08:06:38.594 +01:00 [DBG] Request matched endpoint 'CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API)'
+2023-09-25 08:06:38.596 +01:00 [INF] Executing endpoint 'CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API)'
+2023-09-25 08:06:38.601 +01:00 [INF] Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult GetCities() on controller CityInfo.API.Controllers.CitiesController (CityInfo.API).
+2023-09-25 08:06:38.601 +01:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-09-25 08:06:38.601 +01:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-09-25 08:06:38.602 +01:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-09-25 08:06:38.602 +01:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-09-25 08:06:38.602 +01:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-09-25 08:06:38.602 +01:00 [DBG] Executing controller factory for controller CityInfo.API.Controllers.CitiesController (CityInfo.API)
+2023-09-25 08:06:38.603 +01:00 [DBG] Executed controller factory for controller CityInfo.API.Controllers.CitiesController (CityInfo.API)
+2023-09-25 08:06:38.611 +01:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[CityInfo.API.Models.CityDto, CityInfo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-25 08:06:38.694 +01:00 [INF] Executed action CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) in 91.1675ms
+2023-09-25 08:06:38.695 +01:00 [INF] Executed endpoint 'CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API)'
+2023-09-25 08:06:38.695 +01:00 [DBG] Connection id "0HMTTINR61LQQ" completed keep alive response.
+2023-09-25 08:06:38.696 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7015/api/cities - - - 200 - application/json;+charset=utf-8 126.2901ms

@@ -19,6 +19,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +28,7 @@
     <None Remove="Services\" />
     <None Remove="Entities\" />
     <None Remove="DBContexts\" />
+    <None Remove="Profiles\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -34,5 +36,6 @@
     <Folder Include="Services\" />
     <Folder Include="Entities\" />
     <Folder Include="DBContexts\" />
+    <Folder Include="Profiles\" />
   </ItemGroup>
 </Project>

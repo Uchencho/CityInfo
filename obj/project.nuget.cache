@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/RLjtuNsMHqyfwc+YknWQPH28/06H7e7dxx61yziqp6UHMzTjy/VBOtEAL1sE+To1bwuh0EBBXVfcdPvTpa/ww==",
+  "dgSpecHash": "bbFp39Cvx3n8Q1zjR3g5tSgxF7kjyaYB6zmKsNY0uoS4f6idqYfHReTML7CS/nLSl5wdyRytlk/pwrn8ZGF5AQ==",
   "success": true,
   "projectFilePath": "/Users/uchencho/Documents/work/C#/CityInfo/CityInfo.API/CityInfo.API.csproj",
   "expectedPackageFiles": [
+    "/Users/uchencho/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
+    "/Users/uchencho/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "/Users/uchencho/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/uchencho/.nuget/packages/microsoft.aspnetcore.jsonpatch/6.0.1/microsoft.aspnetcore.jsonpatch.6.0.1.nupkg.sha512",
     "/Users/uchencho/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/6.0.1/microsoft.aspnetcore.mvc.newtonsoftjson.6.0.1.nupkg.sha512",
@@ -54,12 +56,10 @@
     "/Users/uchencho/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/Users/uchencho/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "/Users/uchencho/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/uchencho/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512",
     "/Users/uchencho/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/uchencho/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/uchencho/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
-    "/Users/uchencho/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
-    "/Users/uchencho/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
-    "/Users/uchencho/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.11/microsoft.netcore.app.host.osx-arm64.6.0.11.nupkg.sha512"
+    "/Users/uchencho/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
