@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json;
 using AutoMapper;
 using CityInfo.API.Entities;
 using CityInfo.API.Models;
@@ -14,6 +15,7 @@ namespace CityInfo.API.Controllers
         //private readonly CitiesDataStore _cityDataStore;
         private readonly ICityInfoRepository _cityInfoRepository;
         private readonly IMapper _mapper;
+		const int maxCitiesPageSize = 20;
 
         public CitiesController(ICityInfoRepository cityInfoRepository, IMapper mapper)
 		{
@@ -23,36 +25,22 @@ namespace CityInfo.API.Controllers
         }
 
 		[HttpGet]
-		public async Task<ActionResult<IEnumerable<CityWithoutPointsOfInterestDto>>> GetCitiesAsync()
+		public async Task<ActionResult<IEnumerable<CityWithoutPointsOfInterestDto>>> GetCitiesAsync([FromQuery(Name = "q")] string? name,
+			string? searchQuery, int pageNumber = 1, int pageSize = 10)
 		{
-			var cityEntities = await _cityInfoRepository.GetCitiesAsync();
-			return Ok(_mapper.Map<IEnumerable<CityWithoutPointsOfInterestDto>>(cityEntities));
-			//var result = new List<CityWithoutPointsOfInterestDto>();
+			if (pageSize > maxCitiesPageSize)
+			{
+				pageSize = maxCitiesPageSize;
+			}
 
-			//foreach(City c in cityEntities)
-			//{
-			//	result.Add(new CityWithoutPointsOfInterestDto
-			//	{
-			//		Id = c.Id,
-			//		Description = c.Description,
-			//		Name = c.Name,
-			//	});
-			//}
-			//return Ok(result);
-			//return Ok()
-			//return new JsonResult(_cityDataStore.Cities);
+			var (cityEntities,pagination) = await _cityInfoRepository.GetCitiesAsync(name, searchQuery, pageNumber, pageSize);
+			Response.Headers.Add("X-Pagination", JsonSerializer.Serialize(pagination));
+
+			return Ok(_mapper.Map<IEnumerable<CityWithoutPointsOfInterestDto>>(cityEntities));
 		}
 		[HttpGet("{id}")]
 		public async Task<IActionResult> GetCity(int id, bool includePointOfInterest = false)
 		{
-			//var val = _cityDataStore.Cities.FirstOrDefault(c => c.Id == id);
-			//if (val == null)
-			//{
-			//	Console.WriteLine($"value of val is {val}");
-			//	return new JsonResult(new object());
-			//}
-			//  Console.WriteLine($"value of val is {val}");
-
 			var city = await _cityInfoRepository.GetCityAsync(id, includePointOfInterest);
 			if (city == null)
 			{
