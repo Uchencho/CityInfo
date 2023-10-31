@@ -1,27 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/uchencho/Documents/work/C#/CityInfo/CityInfo.API/CityInfo.API.csproj": {}
+    "C:\\Users\\hp\\OneDrive\\Documents\\dotnet\\CityInfo\\CityInfo.API.csproj": {}
   },
   "projects": {
-    "/Users/uchencho/Documents/work/C#/CityInfo/CityInfo.API/CityInfo.API.csproj": {
+    "C:\\Users\\hp\\OneDrive\\Documents\\dotnet\\CityInfo\\CityInfo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/uchencho/Documents/work/C#/CityInfo/CityInfo.API/CityInfo.API.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\OneDrive\\Documents\\dotnet\\CityInfo\\CityInfo.API.csproj",
         "projectName": "CityInfo.API",
-        "projectPath": "/Users/uchencho/Documents/work/C#/CityInfo/CityInfo.API/CityInfo.API.csproj",
-        "packagesPath": "/Users/uchencho/.nuget/packages/",
-        "outputPath": "/Users/uchencho/Documents/work/C#/CityInfo/CityInfo.API/obj/",
+        "projectPath": "C:\\Users\\hp\\OneDrive\\Documents\\dotnet\\CityInfo\\CityInfo.API.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\OneDrive\\Documents\\dotnet\\CityInfo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/uchencho/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
-          "/usr/local/share/dotnet/sdk/7.0.302/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,6 +43,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Microsoft.AspNetCore.JsonPatch": {
               "target": "Package",
@@ -110,7 +114,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
