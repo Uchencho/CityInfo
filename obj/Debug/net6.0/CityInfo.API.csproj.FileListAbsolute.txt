@@ -187,3 +187,4 @@ C:\Users\hp\OneDrive\Documents\dotnet\CityInfo\obj\Debug\net6.0\ref\CityInfo.API
 C:\Users\hp\OneDrive\Documents\dotnet\CityInfo\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\hp\OneDrive\Documents\dotnet\CityInfo\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\hp\OneDrive\Documents\dotnet\CityInfo\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\hp\OneDrive\Documents\dotnet\CityInfo\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll

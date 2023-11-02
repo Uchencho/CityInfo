@@ -1,6 +1,7 @@
 ﻿using CityInfo.API;
 using CityInfo.API.DBContexts;
 using CityInfo.API.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -63,6 +64,13 @@ builder.Services.AddAuthorization(options =>
         policy.RequireAuthenticatedUser();
         policy.RequireClaim("city", "Antwerp");
     });
+});
+
+builder.Services.AddApiVersioning(setupAction =>
+{
+    setupAction.AssumeDefaultVersionWhenUnspecified = true;
+    setupAction.DefaultApiVersion = new ApiVersion(1, 0);
+    setupAction.ReportApiVersions = true;
 });
 
 

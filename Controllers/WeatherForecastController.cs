@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CityInfo.API.Controllers;
 
 [ApiController]
-[Authorize]
+//[Authorize]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
