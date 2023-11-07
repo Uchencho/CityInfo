@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CityInfo.API.Controllers
 {
     [ApiController]
-	//[Authorize
+	[Authorize]
 	[ApiVersion("1.0")]
 	[Route("api/v{version:apiVersion}/cities")]
 	public class CitiesController : ControllerBase
@@ -39,8 +39,20 @@ namespace CityInfo.API.Controllers
 			
 			return Ok(_mapper.Map<IEnumerable<CityWithoutPointsOfInterestDto>>(cityEntities));
 		}
+
+		/// <summary>
+		/// Get city given an id
+		/// </summary>
+		/// <param name="id"> id of the city</param>
+		/// <param name="includePointOfInterest"> whether or not the point of interest should be included in the response</param>
+		/// <returns>An IAction</returns>
+		/// <response code="200">Return the requested city</response>
+		/// <response code="404">Return a 404 status code with no body</response>
 		[HttpGet("{id}")]
-		public async Task<IActionResult> GetCity(int id, bool includePointOfInterest = false)
+		[ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetCity(int id, bool includePointOfInterest = false)
 		{
 			var city = await _cityInfoRepository.GetCityAsync(id, includePointOfInterest);
 			if (city == null)

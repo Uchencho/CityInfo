@@ -188,3 +188,4 @@ C:\Users\hp\OneDrive\Documents\dotnet\CityInfo\bin\Debug\net6.0\Microsoft.AspNet
 C:\Users\hp\OneDrive\Documents\dotnet\CityInfo\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\hp\OneDrive\Documents\dotnet\CityInfo\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\hp\OneDrive\Documents\dotnet\CityInfo\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\hp\OneDrive\Documents\dotnet\CityInfo\bin\Debug\net6.0\CityInfo.API.xml
